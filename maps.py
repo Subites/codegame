@@ -1,6 +1,7 @@
+import numpy
 class Maps:
     mapsize = (0,0)
-    mapfill = "o"
+    mapfill = " "
     mapshow = []
     mapoutput = ""
     def __init__(self,mapsize,mapfill):
@@ -12,4 +13,4 @@ class Maps:
             self.mapshow.append([])
             for k in range(self.mapsize[0]*3):
                 self.mapshow[i].append(self.mapfill)
-        return self.mapshow#返回列表矩阵
+        return numpy.array(self.mapshow)#返回列表矩阵
